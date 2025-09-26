@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+  <title>Responsive Background</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background-color 0.4s ease;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      transition: color 0.3s ease;
+      text-align: center;
+      padding: 20px 30px;
+      border-radius: 14px;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    /* Mobile Devices */
+    @media (min-width: 319px) and (max-width: 480px) {
+      body {
+        background-color: lightsalmon;
+      }
+
+      h1::before {
+        content: "📱 ";
+      }
+
+      h1::after {
+        content: " Mobile (319px – 480px)";
+      }
+    }
+
+    /* Tablets */
+    @media (min-width: 481px) and (max-width: 1200px) {
+      body {
+        background-color: powderblue;
+      }
+
+      h1::before {
+        content: "📱💻 ";
+      }
+
+      h1::after {
+        content: " Tablet (481px – 1200px)";
+      }
+    }
+
+    /* Laptops */
+    @media (min-width: 1201px) and (max-width: 1600px) {
+      body {
+        background-color: limegreen;
+      }
+
+      h1::before {
+        content: "💻 ";
+      }
+
+      h1::after {
+        content: " Laptop (1201px – 1600px)";
+      }
+    }
+
+    /* Desktops */
+    @media (min-width: 1601px) {
+      body {
+        background-color: seagreen;
+      }
+
+      h1::before {
+        content: "🖥️ ";
+      }
+
+      h1::after {
+        content: " Desktop (1601px and above)";
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1></h1>
+</body>
+
+</html>
